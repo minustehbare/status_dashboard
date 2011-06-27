@@ -6,7 +6,6 @@ gem 'rails', '3.0.7'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'status_dashboard', :git => 'git@github.com:minustehbare/status_dashboard.git'
 
 # Use unicorn as the web server
 # gem 'unicorn'
