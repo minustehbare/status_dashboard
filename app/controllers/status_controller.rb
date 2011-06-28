@@ -1,7 +1,9 @@
 class StatusController < ApplicationController
-  ERROR_FREQUENCY_MINIMUM = 0
 
   def index
+  
+    before_index
+    
     @frequent_errors = 
       begin
         Rails.cache.fetch('frequent_hoptoad_errors') do
@@ -19,6 +21,17 @@ class StatusController < ApplicationController
     end
     
     @posts = Post.paginate :page => params[:page], :order => 'created_at DESC'
+    
+    after_index
+    
+  end
+  
+  private
+  
+  def before_index
+  end
+  
+  def after_index
   end
   
 end
