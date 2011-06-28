@@ -1,6 +1,6 @@
 newrelic_api_config = 
   begin
-    YAML::load(File.open(File.expand_path('config/hoptoad_api.yml')))
+    YAML::load(File.open(File.expand_path('config/newrelic_api.yml')))
   rescue
     nil
   end
