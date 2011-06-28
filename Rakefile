@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-StatusDashboardPublic::Application.load_tasks
+StatusDashboard::Application.load_tasks
