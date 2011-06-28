@@ -14,9 +14,8 @@ First you will need a sandbox Rails environment
 
 Add the following to your Gemfile
 
-`gem 'status_dashboard', :git => 'git@github.com:minustehbare/status_dashboard.git'`
-
-`gem 'activeadmin'`
+    gem 'status_dashboard', :git => 'git@github.com:minustehbare/status_dashboard.git'
+    gem 'activeadmin'
 
 Install the newly added gems
 
@@ -24,9 +23,8 @@ Install the newly added gems
 
 Now it's time to generate ActiveAdmin and StatusDashboard
 
-`rails g active_admin:install`
-
-`rails g status_dashboard:install`
+    rails g active_admin:install
+    rails g status_dashboard:install
 
 You will be prompted about overwriting the default `app/admin/dashboards.rb` file.  Confirm the overwrite and move on.  Migrate the database
 
@@ -49,9 +47,8 @@ The URL is the one used by Hoptoad (e.g. https://<app_name>.hoptoadapp.com) and 
 
 Lastly, remove the pesky default root view and boot your server
 
-`rm public/index.html`
-
-`rails s`
+    rm public/index.html
+    rails s
 
 This set of instructions 'registers' the Post model with ActiveAdmin for use in the admin interface.  It also generates a _very_ generic root view to display Posts made, Hoptoad errors, and a color-indicator for the health of your application according to NewRelic.  To make your life easier, the root view is automatically created in your application so you can override it from the start.
 
