@@ -43,7 +43,7 @@ If you want to take advantage of display Hoptoad errors to your users, do someth
       site_url: [your_site_url]
       error_frequency_minimum: [minimum_error_occurrence]
 
-The URL is the one used by Hoptoad (e.g. https://<app_name>.hoptoadapp.com) and the error frequency defines a minimum threshold of occurrence before the error is deemed 'important' enough to display to your users.
+The URL is the one used by Hoptoad (e.g. https://your_app_name.hoptoadapp.com) and the error frequency defines a minimum threshold of occurrence before the error is deemed 'important' enough to display to your users.
 
 Lastly, remove the pesky default root view and boot your server
 
