@@ -23,6 +23,22 @@ module StatusDashboard
         copy_file 'index.html.erb', 'app/views/status/index.html.erb'
       end
       
+      def create_config_files
+        create_file 'config/newrelic_api.yml' do
+          'newrelic_api:
+  api_key:
+  account_id:'
+        end
+        
+        create_file 'config/hoptoad_api.yml' do
+          'hoptoad_api:
+  auth_token:
+  site_url:
+  error_frequency_minimum: 0
+  error_expiry_time_in_minutes: 5'
+        end
+      end
+      
       def create_migrations
         Dir["#{self.class.source_root}/migrations/*.rb"].sort.each do |filepath|
           name = File.basename(filepath)

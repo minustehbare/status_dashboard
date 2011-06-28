@@ -1,25 +1,30 @@
+<h1><%= @newrelic_account.applications.first.threshold_values.first.color_value %></h1>
+
 <!-- display posts made by admin user(s) -->
+<h1>Posts</h1>
 <% @posts.each do |p| %>
   <%= post_body_to_html p %><br />
 <% end %>
+<h1>Common Errors</h1>
 <!-- display frequent errors, as defined by the status_controller -->
 <% if not @frequent_errors.nil? and not @frequent_errors.empty? %>
-<table>
-  <tr>
-    <th>What</th>
-    <th>When</th>
-    <th>Description</th>
-    <th></th>
-  </tr>
-  <% @frequent_errors.each do |error| %>
-      <tr>
-        <td><%= error.error_class %></td>
-        <td><%= time_ago_in_words error.most_recent_notice_at.to_time %> ago</td>
-        <td><%= error.error_message %></td>
-      </tr>
-  <% end %>
-</table>
+  <table>
+    <tr>
+      <th>What</th>
+      <th>When</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+    <% @frequent_errors.each do |error| %>
+        <tr>
+          <td><%= error.error_class %></td>
+          <td><%= time_ago_in_words error.most_recent_notice_at.to_time %> ago</td>
+          <td><%= error.error_message %></td>
+        </tr>
+    <% end %>
+  </table>
 <% end %>
+<h1>A NewRelic Chart if you fancy pictures</h1>
 <!-- insert your custom newrelic rpm chart here -->
 <h1>Huzzah</h1>
 
