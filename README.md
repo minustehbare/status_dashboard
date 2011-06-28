@@ -54,7 +54,7 @@ Without enumerating all possibilities for customization, there are a few that co
 
 ***Pagination***
 
-A first choice is the paginate the Posts displayed on the root view.  Add to your Gemfile:
+A first choice is to paginate the Posts displayed on the root view.  Add to your Gemfile:
 
 `gem 'will_paginate', '~> 3.0.pre2'`
 
