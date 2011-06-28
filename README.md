@@ -52,6 +52,8 @@ Lastly, remove the pesky default root view and boot your server
 
 This set of instructions 'registers' the Post model with ActiveAdmin for use in the admin interface.  It also generates a _very_ generic root view to display Posts made, Hoptoad errors, and a color-indicator for the health of your application according to NewRelic.  To make your life easier, the root view is automatically created in your application so you can override it from the start.
 
+As a final note, NewRelic restricts you to only being able to request app status every one minute.  To bypass unnecessary external requests to both Hoptoad and NewRelic, the results from the request are cached with an expiry time.  You will need to have some sort of cache client that supports cache expiration unless you want static results.
+
 Customizing
 ===========
 
